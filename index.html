@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Left Panel Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showContent(contentId, id) {
+            // Hide all content sections
+            var contentSections = document.querySelectorAll('#content > div');
+            for (var j = 0; j < contentSections.length; j++) {
+                contentSections[j].style.display = 'none';
+            }
+
+            // Show selected content section
+            var main = document.getElementById(contentId);
+            main.style.display = 'block';
+
+            // Remove 'active' class from all links
+            var links = document.querySelectorAll('#left-panel a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove('active');
+            }
+
+            // Add 'active' class to the clicked link
+            var activeLink = document.getElementById(id);
+            activeLink.classList.add('active');
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="left-panel">
+        <ul>
+            <li><a href="#" onclick="showContent('home-content','home')" id="home" class="active">Home</a></li>
+            <li><a href="#" onclick="showContent('contact-content','contact')" id="contact">Contact</a></li>
+            <li><a href="#" onclick="showContent('info-content','info')" id="info">Information</a></li>
+            <li><a href="#" onclick="showContent('guide-content','guide')" id="guide">Guide</a></li>
+        </ul>
+    </div>
+    <div id="content">
+
+        <!-- -----------------------home section-------------------------- -->
+
+        <div id="home-content">
+            <h2>Welcome <span>to KAVERI</span> Tours &amp; Travels !</h2>
+            <p>Kaveri Tours and Travels is a leading travel company in India that offers guided tours to various
+                destinations. Whether you want to learn about the history of Delhi, the culture of Jaipur, the wildlife
+                of Ranthambore, or the spirituality of Varanasi, Kaveri Tours and Travels has a tour for you. You can
+                choose from a range of packages, including heritage, adventure, pilgrimage, and honeymoon, and enjoy
+                services like hotel booking, transportation, sightseeing, and local guides. With Kaveri Tours and
+                Travels, you can discover the best of India with expert guidance and support.</p>
+            <button class="btn">Book your Guided Tour Now!</button>
+        </div>
+
+        <!-- -----------------------contact section-------------------------- -->
+
+        <div id="contact-content">
+            <h2>Welcome <span>to the</span> Contact page!</h2>
+            <p>Contact information goes here.</p>
+            <section class="footer">
+                <div class="contact-us">
+                    <h2>Contact</h2>
+                    <ul class="details">
+                        <li>
+                            Phone : <a href="tel:+91 9889494645">+91 9889494645</a>
+                        </li>
+                        <li>
+                            Email : <a href="mailto:ecellcontact@gmail.com" target="_blank">kaverisupport@gmail.com</a>
+                        </li>
+                        <li>
+                            Address : <span>Haridwar, Uttarakhand, India</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation">
+                    <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="#">Get The Most Adventurous Experience</a></li>
+                        <li><a href="#">Enjoy The Beach</a></li>
+                        <li><a href="#">Relax In The Mountains</a></li>
+                        <li><a href="#">Go For A Spiritual Vacation</a></li>
+                        <li><a href="#">Book An International Holiday</a></li>
+                    </ul>
+                </div>
+                <div class="follow_us">
+                    <h2> FOLLOW US</h2>
+                    <div class="social_images">
+                        <a href="#" target="_blank"><img
+                                src="images/instagram.png"></a>
+                        <a href="#"
+                            target="_blank"><img src="images/linkedin.png"></a>
+                        <a href="#" target="_blank"><img src="images/twitter.png"></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="copyright">
+                © 2023 Kritika Singh. All Rights Reserved
+            </section>
+
+        </div>
+
+        <!-- -----------------------info section-------------------------- -->
+
+        <div id="info-content">
+            <h2>Welcome <span>to the</span> Information page!</h2>
+            <div class="about-section">
+                <div class="about-cont">
+                    <div class="main-txt">
+                        <h1><span>About</span> The <strong>Guided <br>Tour</strong> Program</h1>
+                    </div>
+                    <div class="main-txt">
+                        <p>"Embark on an immersive guided tour program, where expert guides unveil hidden gems, historical landmarks, and local culture, creating unforgettable experiences for curious travelers."
+                        </p>
+                        <button class="btn">Start Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------------guide section-------------------------- -->
+
+        <div id="guide-content">
+            <h2>Welcome <span>to the</span> Guide page!</h2>
+            <p>Guide content goes here.</p>
+        </div>
+    </div>
+</body>
+
+</html>
